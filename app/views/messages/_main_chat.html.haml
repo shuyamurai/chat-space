@@ -1,0 +1,74 @@
+.chat-main
+  .chat-main__group-info
+    .chat-main__group-info__header
+      .chat-main__group-info__header__group
+        %p.chat-main__group-info__header__group__group-name
+          test
+        %ul.chat-main__group-info__header__group__group-member
+          Member : 
+          %li.chat-main__group-info__header__group__group-member__name
+            masa
+    .chat-main__group-info__edit
+      = link_to "#" , class: 'chat-main__group-info__edit__text' do
+        Edit
+
+
+
+
+
+  .chat-main__message-list
+    .chat-main__message-list__box
+      .chat-main__message-list__box__text
+        %p.chat-main__message-list__box__text__name
+          masa
+        %p.chat-main__message-list__box__text__time
+          2019/11/20(Wed) 17:43:01
+      .chat-main__message-list__box__message
+        %p.chat-main__message-list__box__message__comment
+          おはよう！
+    .chat-main__message-list__box 
+      .chat-main__message-list__box__text
+        %p.chat-main__message-list__box__text__name
+          masa
+        %p.chat-main__message-list__box__text__time
+          2019/11/20(Wed) 17:43:34
+      .chat-main__message-list__box__message
+        %p.chat-main__message-list__box__message__comment
+          今日は夜から雨
+
+
+
+  .chat-main__message-form
+    %form.chat-main__message-form__form
+      .chat-main__message-form__form__message
+        %input{"placeholder": "type a message", "type": "text", "name": "message[content]", class:'chat-main__message-form__form__message__input'}
+          %label{class: "chat-main__message-form__form__message__input__label"}
+            = icon('far', 'image', class: 'chat-main__message-form__form__message__input__label__icon')
+            %input{type: "file", name: "message[image]", class: 'chat-main__message-form__form__message__input__label__icon__input2'}
+      %input{"name": "commit", "type": "submit", "value": "Send", class:'chat-main__message-form__form__send'}     
+
+
+  -# .chat-main__message-form
+  -#   .chat-main__message-form__wrapper
+  -#     .chat-main__message-form__wrapper__message
+  -#       %form.chat-main__message-form__wrapper__message__form
+  -#         %input{"placeholder": "type a message", "type": "text", "name": "message[content]"}
+  -#           %label{class: "chat-main__message-form__wrapper__message__form__icon"}
+  -#             = icon('fas', 'image', class: 'chat-main__message-form__wrapper__message__form__icon__image')
+  -#             %input{type: "file", name: "message[image]", class: 'chat-main__message-form__wrapper__message__form__icon__image__file'}
+  -#     %input{"name": "commit", "type": "submit", "value": "Send", class:'chat-main__message-form__wrapper__send'}
+
+  -# .chat-main__message-form
+  -#   .chat-main__message-form__wrapper
+  -#     .chat-main__message-form__wrapper__message
+  -#       %form.chat-main__message-form__wrapper__message__form
+  -#         %input{"placeholder": "type a message", "type": "text", "name": "message[content]"}
+  -#         .chat-main__message-form__wrapper__message__form__label
+  -#           %label{class: "chat-main__message-form__wrapper__message__label__icon"}
+  -#             = icon('fas', 'image')
+  -#             %input{type: "file"}
+  -#         .chat-main__message-form__wrapper__message__form__send
+  -#           %input.Form__submitBtn{"name": "commit", "type": "submit", "value": "Send"}
+
+
+
